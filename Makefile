@@ -23,7 +23,7 @@ endif
 all: build
 
 redis:
-	docker build -t segura/$(NAME):build -f Dockerfile .
+	docker build --squash -t segura/$(NAME):build -f Dockerfile .
 
 build: redis
 
